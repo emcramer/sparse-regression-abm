@@ -56,3 +56,33 @@ Patterned vs random (“co-culture”) prints containing MCF10A, MDA-MB-231, and
 <p>Hybrid cells are joint GFP-RFP fusions of macrophages and colorectal tumor cells. They appear green and yellow on the liver cell imaging. Colorectal tumor cells are RFP positive.</p>
 
 </details>
+
+## Rules for Agent-Based Model
+<details>
+<summary>Hill Functions</summary>
+Commonly used to model substrate concentrations or binding affinity of proteins in biochemistry. In this case, we use it to model a given response to a stimulus (eg. substrate).
+A helpful full description of Hill Functions and their parameters <a href="https://www.physiologyweb.com/calculators/hill_equation_interactive_graph.html">here</a>.
+<br/>
+<img src="apsa-media/Hill-Langmuir_equation.png" width="720px"/>
+</details>
+
+<details>
+<summary>Rule Set (Development Ongoing)</summary>
+
+| Cell Type | Stimulus               | Effect    | Response                | Saturation | Half-Max | Hill Coefficient |
+|-----------|------------------------|-----------|-------------------------|------------|----------|------------------|
+| tumor     | pressure               | decreases | cycle entry             | 0          | 1        | 4                |
+| tumor     | oxygen                 | increases | cycle entry             | 0.00007    | 21.5     | 2                |
+| tumor     | oxygen                 | decreases | necrosis                | 0          | 3.75     | 8                |
+| tumor     | dead                   | increases | debris secretion        | 1          | 0.5      | 10               |
+| tumor     | oxygen                 | increases | canc_ligand secretion   | 1          | 0.5      | 8                |
+| tumor     | hybrid_ligand gradient | increases | migration speed         | 1          | 0.5      | 2                |
+| tumor     | hybrid_ligand gradient | increases | migration bias          | 1          | 0.5      | 4                |
+| hybrid    | oxygen                 | increases | cycle entry             | 0.00007    | 21.5     | 2                |
+| hybrid    | pressure               | decreases | cycle entry             | 0          | 1        | 4                |
+| hybrid    | oxygen                 | decreases | necrosis                | 0          | 1        | 4                |
+| hybrid    | canc_ligand gradient   | increases | migration speed         | 1          | 0.5      | 2                |
+| hybrid    | canc_ligand gradient   | increases | migration bias          | 1          | 0.5      | 4                |
+| hybrid    | oxygen                 | increases | hybrid_ligand secretion | 1          | 0.5      | 4                |
+
+</details>
