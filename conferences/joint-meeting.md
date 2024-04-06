@@ -3,7 +3,8 @@
 <details>
 <summary>Bioprint Sample Preparation</summary>
 <img alt="Example workflow for sample bioprint preparation" src="apsa-media/apsa-poster-fig-2.png" width="600px"/>
-
+<p>MC38-H2B-RFP labeled colorectal cancer tumor cells co-cultured with primary bone marrow derived macrophages Y01-Actin-GFP were FACS sorted to isolate double positive RFP-GFP cells</p>
+<p>Cells were printed onto collagen-coated plates using a Biopixlar printer with a heated stage insert produced by Fluicell.</p>
 </details>
 
 ## Example Simulations
